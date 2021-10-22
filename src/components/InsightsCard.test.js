@@ -10,53 +10,50 @@ const defaultsetup = {
   heading: HEADING,
   body: BODY,
   impactLevel: "medium",
-  screenSize: "small",
 };
 
 describe("card on a small screen", () => {
   test("it renders without error", () => {
     const wrapper = mount(<InsightsCard {...defaultsetup} />);
-    const insightsCard = findByTestAttr(wrapper, "component-insights-card");
+    const insightsCard = findByTestAttr(
+      wrapper,
+      "component-insights-card"
+    ).hostNodes();
     expect(insightsCard.length).toBe(1);
   });
   test("it renders an onTrack pill", () => {
     const wrapper = mount(<InsightsCard {...defaultsetup} />);
-    const onTrackPill = findByTestAttr(wrapper, "on-track-pill");
+    const onTrackPill = findByTestAttr(wrapper, "on-track-pill").hostNodes();
     expect(onTrackPill.length).toBe(1);
   });
   test("it renders an impact pill on top", () => {
     const wrapper = mount(<InsightsCard {...defaultsetup} />);
-    const topImpactPill = findByTestAttr(wrapper, "impact-pill-bottom");
+    const topImpactPill = findByTestAttr(
+      wrapper,
+      "impact-pill-top"
+    ).hostNodes();
     expect(topImpactPill.length).toBe(1);
-  });
-  test("it should not have an impact pill on the bottom", () => {
-    const wrapper = mount(<InsightsCard {...defaultsetup} />);
-    const bottomImpactPill = findByTestAttr(wrapper, "impact-pill-top");
-    expect(bottomImpactPill.exists()).toBe(false);
   });
   test("it renders a heading", () => {
     const wrapper = mount(<InsightsCard {...defaultsetup} />);
-    const heading = findByTestAttr(wrapper, "heading");
+    const heading = findByTestAttr(wrapper, "heading").hostNodes();
     expect(heading.length).toBe(1);
   });
   test("it renders a text body", () => {
     const wrapper = mount(<InsightsCard {...defaultsetup} />);
-    const textBody = findByTestAttr(wrapper, "text");
+    const textBody = findByTestAttr(wrapper, "text").hostNodes();
     expect(textBody.length).toBe(1);
   });
 });
 
 describe("card on a large screen", () => {
   test("it renders an impact pill on the bottom", () => {
-    const props = { ...defaultsetup, screenSize: "large" };
+    const props = { ...defaultsetup };
     const wrapper = mount(<InsightsCard {...props} />);
-    const bottomImpactPill = findByTestAttr(wrapper, "impact-pill-top");
+    const bottomImpactPill = findByTestAttr(
+      wrapper,
+      "impact-pill-bottom"
+    ).hostNodes();
     expect(bottomImpactPill.length).toBe(1);
-  });
-  test("it should not have an impact pill on the top", () => {
-    const props = { ...defaultsetup, screenSize: "large" };
-    const wrapper = mount(<InsightsCard {...defaultsetup} {...props} />);
-    const topImpactPill = findByTestAttr(wrapper, "impact-pill-bottom");
-    expect(topImpactPill.exists()).toBe(false);
   });
 });
