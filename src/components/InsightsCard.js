@@ -12,6 +12,7 @@ const InsightsCard = ({ onTrack, heading, body, impactLevel }) => {
       flex={1}
       data-test="component-insights-card"
       maxWidth="lg"
+      style={{ minWidth: "200px" }}
       p={{ sm: "16px", md: "24px", lg: "24px", xl: "24px" }}
     >
       <Flex direction="column" height="100%">

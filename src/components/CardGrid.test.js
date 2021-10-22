@@ -19,7 +19,7 @@ const cards = [
   },
 ];
 
-describe("hu", () => {
+describe("Card Grid", () => {
   beforeEach(() => {
     Object.defineProperty(window, "matchMedia", {
       writable: true,
