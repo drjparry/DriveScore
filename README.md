@@ -1,70 +1,18 @@
-# Getting Started with Create React App
+# Test notes
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In this test I unfortunately haven't managed to achieve the objective in the time specified. I started ok for the first two hours using TDD to build out the components in a scalable way. At this point though, I still hadn't considered styling and implementing the breakpoints. I was unsure how to approach implementing the breakpoints, initially wanting to make a simple breakpoint based on a screen width function or using CSS, but finally thought that using ChakraUI's breakpoints feature might allow me to move faster given the time constraints.
 
-## Available Scripts
+This was a bad idea...
 
-In the project directory, you can run:
+By the time I had understood how to customise their breakpoints to the ones specified, I had already significantly eaten into my remaining time, and then I saw that all my tests were breaking. Oh to mock Chakra and the widow matchMedia function... After that I had an issue with my tests using 'mount' and I watched with horror as the time ticked over. So I did my best to apply some styling and fetch the data to calculate the onTrack pill state, but by now I was well out of time and have therefore only partially implemented the feature.
 
-### `yarn start`
+# What I would do differently given more time and things I would like to improve.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- I would not have used ChakraUi and implemented a single breakpoint in a simpler way.
+- I would use StyledComponents for the styling and organise things a lot more neatly instead of the inline styles I've implemented at the moment.
+- I would finish the business logic for the pill data and have them tested.
+- I would have preferred using Typescript, but I was already concerned about the time and thought it would further slow me down.
+- My tests are far from complete. There are no tests for the actions and the component tests could be more complete.
+- I'm not happy with my naming. CardGrid is misleading and originally sat bedside CardCarousel as I had originally planned to use two separate components before eventually settling on the single component. I'm still not sure this was the best idea.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thanks for the chance to submit the test in any case. It was a challenging exercise.
